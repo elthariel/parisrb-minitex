@@ -1,5 +1,5 @@
 ---
-chdir: /home/lta/code/teaching/parisrb-minitex
+chdir: /home/tex/api/current
 environment: production
 timeout: 30
 log: log/thin.log
