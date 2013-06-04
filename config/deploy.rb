@@ -31,16 +31,16 @@ before 'deploy:setup', 'rvm:install_rvm', 'rvm:install_ruby'
 namespace :deploy do
   desc "Start the Thin processes"
   task :start do
-    exec "bundle exec thin start -C config/thin.yml"
+    run "cd #{deploy_to}/current && bundle exec thin start -C config/thin.yml"
   end
 
   desc "Stop the Thin processes"
   task :stop do
-    exec "bundle exec thin stop -C config/thin.yml"
+    run "cd #{deploy_to}/current && bundle exec thin stop -C config/thin.yml"
   end
 
   desc "Restart the Thin processes"
   task :restart do
-    exec "bundle exec thin restart -C config/thin.yml"
+    run "cd #{deploy_to}/current && bundle exec thin restart -C config/thin.yml"
   end
 end

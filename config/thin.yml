@@ -12,3 +12,4 @@ servers: 4
 onebyone: true
 daemonize: true
 socket: tmp/pids/thin.sock
+
