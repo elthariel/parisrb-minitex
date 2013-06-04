@@ -33,12 +33,17 @@ gem 'haml-rails'
 # gem 'unicorn'
 gem 'thin'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+group :development do
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'rvm-capistrano'
 
-# To use debugger
-# gem 'debugger'
+  # To use debugger
+  gem 'debugger'
+end
 
+# API stuff
 gem 'rocket_pants'
 gem 'apipie-rails'
 gem 'kaminari'

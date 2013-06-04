@@ -26,6 +26,7 @@ The api server can be run very easily following the traditionnal rails procedure
 
 Here we're using sinatra, still with Bundler goodness :
 
+* The client can be found here : https://github.com/elthariel/parisrb-minitex-client
 * `bundle install` : Same as above.
 * `ruby client.rb` : Runs the sinatra application.
 
