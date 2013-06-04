@@ -38,6 +38,7 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
   gem 'rvm-capistrano'
+  gem 'capistrano-file_db'
 
   # To use debugger
   gem 'debugger'

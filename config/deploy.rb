@@ -23,8 +23,12 @@ require "rvm/capistrano"
 ##############################
 # Automatically install bundle
 require "bundler/capistrano"
+##############################
+# Handle SQLite db
+require "capistrano-file_db"
 
 before 'deploy:setup', 'rvm:install_rvm', 'rvm:install_ruby'
+after 'deploy', 'file_db:symlink_db', 'file_db:chmod_db'
 
 
 # Generate an additional task to fire up the thin clusters
